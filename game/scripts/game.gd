@@ -20,10 +20,6 @@ func _input(event):
 		var x = event.x-(event.x%TILE_SIZE)
 		var y = event.y-(event.y%TILE_SIZE)
 		print(x,", ",y)
-		#if (((x / TILE_SIZE) % 2) == 0):
-			#x += TILE_SIZE
-		#if (((y / TILE_SIZE) % 2) == 0):
-			#y += TILE_SIZE
 		var move_pos = Vector2(x, y)
 		if is_valid_map_pos(calculate_tilemap_size(terrain_map), move_pos):
 			players_node.set_pos(move_pos)
@@ -66,7 +62,7 @@ func calculate_tilemap_size(tilemap):
     }
 
 func is_valid_map_pos(tilemap_dims, pos):
-	if (pos.x > (tilemap_dims["x_min"]*TILE_SIZE) and pos.x < ((tilemap_dims["x_max"]*TILE_SIZE)-64)): # x-cord bounds (based on map)
-		if (pos.y > (tilemap_dims["y_min"]*TILE_SIZE) and pos.y < ((tilemap_dims["y_max"]*TILE_SIZE)-64)): # y-cord bounds (based on map)
+	if (pos.x > (tilemap_dims["x_min"]*TILE_SIZE) and pos.x < ((tilemap_dims["x_max"]*TILE_SIZE)-TILE_SIZE)): # x-cord bounds (based on map)
+		if (pos.y > (tilemap_dims["y_min"]*TILE_SIZE) and pos.y < ((tilemap_dims["y_max"]*TILE_SIZE)-TILE_SIZE)): # y-cord bounds (based on map)
 			return true
 	return false
