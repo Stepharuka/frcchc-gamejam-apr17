@@ -1,17 +1,28 @@
 extends TileMap
 
-var selected setget set_selected, get_selected
 var current_pos setget set_current_pos, get_current_pos
 
 func _ready():
 	current_pos = get_pos()
-	set_selected(false)
 
-func set_selected(value):
-	selected = value
+class SelectedUnit:
+	var vector_coords
+	var unit_type
 
-func get_selected():
-	return selected
+var selected_unit
+
+func select_unit(coords):
+	selected_unit = SelectedUnit.new()
+	selected_unit.vector_coords = coords
+	selected_unit.unit_type = get_cellv(coords)
+	set_cellv(coords,-1)
+
+func place_selected_unit(coords):
+	set_cellv(coords,selected_unit.unit_type)
+	selected_unit = null
+
+func get_selected_unit():
+	return selected_unit
 
 func set_current_pos(pos):
 	current_pos = pos
