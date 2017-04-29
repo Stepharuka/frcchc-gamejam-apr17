@@ -22,11 +22,13 @@ func _input(event):
 				get_node("Cursor Unit").show()
 		else:
 			var target_tile = terrain_map.world_to_map(event.pos)
-			if terrain_map.is_passable(target_tile):
-				players_node.place_selected_unit(target_tile)
-				get_node("Cursor Unit").hide()
+			if players_node.get_selected_unit() != null:
+				if terrain_map.is_passable(target_tile):
+					players_node.place_selected_unit(target_tile)
+					get_node("Cursor Unit").hide()
 			else:
-				players_node.place_selected_unit(players_node.get_selected_unit().vector_coords)
+				if players_node.get_selected_unit() != null:
+					players_node.place_selected_unit(players_node.get_selected_unit().vector_coords)
 	elif (event.type == InputEvent.MOUSE_MOTION):
 		if players_node.get_selected_unit() != null:
 			get_node("Cursor Unit").set_pos(event.pos)
