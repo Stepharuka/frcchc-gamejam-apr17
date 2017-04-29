@@ -18,3 +18,8 @@ func set_current_pos(pos):
 
 func get_current_pos():
 	return current_pos
+
+func move_unit(oldcoords, newcoords): # both vars are Vector2
+	var unit_type = get_cellv(oldcoords)
+	set_cellv(oldcoords,-1)
+	set_cellv(newcoords,unit_type)
