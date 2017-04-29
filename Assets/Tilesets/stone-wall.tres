@@ -1,22 +1,23 @@
 [gd_resource type="TileSet" load_steps=12 format=1]
 
-[ext_resource path="res://assets/stone-wall-ia.png" type="Texture" id=1]
-[ext_resource path="res://assets/stone-wall-v.png" type="Texture" id=2]
-[ext_resource path="res://assets/stone-wall-ir.png" type="Texture" id=3]
-[ext_resource path="res://assets/stone-wall-h.png" type="Texture" id=4]
-[ext_resource path="res://assets/stone-wall-r.png" type="Texture" id=5]
-[ext_resource path="res://assets/stone-wall-l.png" type="Texture" id=6]
-[ext_resource path="res://assets/stone-wall-b.png" type="Texture" id=7]
-[ext_resource path="res://assets/stone-wall-t.png" type="Texture" id=8]
-[ext_resource path="res://assets/stone-wall-it.png" type="Texture" id=9]
-[ext_resource path="res://assets/stone-wall-ib.png" type="Texture" id=10]
-[ext_resource path="res://assets/stone-wall-il.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Sprites/stone-wall-ia.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Sprites/stone-wall-v.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/stone-wall-ir.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/stone-wall-h.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/stone-wall-r.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sprites/stone-wall-l.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Sprites/stone-wall-b.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Sprites/stone-wall-t.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Sprites/stone-wall-it.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Sprites/stone-wall-ib.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Sprites/stone-wall-il.png" type="Texture" id=11]
 
 [resource]
 
 0/name = "Intersection"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 64, 64 )
 0/occluder_offset = Vector2( 32, 32 )
 0/navigation_offset = Vector2( 32, 32 )
@@ -25,6 +26,7 @@
 1/name = "Vertical"
 1/texture = ExtResource( 2 )
 1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 64, 64 )
 1/occluder_offset = Vector2( 32, 32 )
 1/navigation_offset = Vector2( 32, 32 )
@@ -33,6 +35,7 @@
 2/name = "Horizontal"
 2/texture = ExtResource( 4 )
 2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 64, 64 )
 2/occluder_offset = Vector2( 32, 32 )
 2/navigation_offset = Vector2( 32, 32 )
@@ -41,6 +44,7 @@
 3/name = "Left End"
 3/texture = ExtResource( 5 )
 3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 0, 64, 64 )
 3/occluder_offset = Vector2( 32, 32 )
 3/navigation_offset = Vector2( 32, 32 )
@@ -49,6 +53,7 @@
 4/name = "Right End"
 4/texture = ExtResource( 6 )
 4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 0, 64, 64 )
 4/occluder_offset = Vector2( 32, 32 )
 4/navigation_offset = Vector2( 32, 32 )
@@ -57,6 +62,7 @@
 5/name = "Top End"
 5/texture = ExtResource( 7 )
 5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 0, 64, 64 )
 5/occluder_offset = Vector2( 32, 32 )
 5/navigation_offset = Vector2( 32, 32 )
@@ -65,6 +71,7 @@
 6/name = "Bottom End"
 6/texture = ExtResource( 8 )
 6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 0, 64, 64 )
 6/occluder_offset = Vector2( 32, 32 )
 6/navigation_offset = Vector2( 32, 32 )
@@ -73,6 +80,7 @@
 7/name = "Intersection Top"
 7/texture = ExtResource( 9 )
 7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 0, 64, 64 )
 7/occluder_offset = Vector2( 32, 32 )
 7/navigation_offset = Vector2( 32, 32 )
@@ -81,6 +89,7 @@
 8/name = "Intersection Bottom"
 8/texture = ExtResource( 10 )
 8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 0, 0, 64, 64 )
 8/occluder_offset = Vector2( 32, 32 )
 8/navigation_offset = Vector2( 32, 32 )
@@ -89,6 +98,7 @@
 9/name = "Intersection Left"
 9/texture = ExtResource( 11 )
 9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 0, 0, 64, 64 )
 9/occluder_offset = Vector2( 32, 32 )
 9/navigation_offset = Vector2( 32, 32 )
@@ -97,6 +107,7 @@
 10/name = "Intersection Right"
 10/texture = ExtResource( 3 )
 10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 0, 0, 64, 64 )
 10/occluder_offset = Vector2( 32, 32 )
 10/navigation_offset = Vector2( 32, 32 )
