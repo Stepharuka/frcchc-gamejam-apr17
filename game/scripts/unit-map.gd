@@ -21,6 +21,11 @@ func place_selected_unit(coords):
 	set_cellv(coords,selected_unit.unit_type)
 	selected_unit = null
 
+func change_selected_unit(coords):
+	if selected_unit != null:
+		place_selected_unit(selected_unit.vector_coords)
+	select_unit(coords)
+
 func get_selected_unit():
 	return selected_unit
 

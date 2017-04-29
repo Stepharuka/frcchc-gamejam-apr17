@@ -8,15 +8,25 @@ onready var players_node = get_node("Level 1/Player Units")
 onready var enemies_node = get_node("Level 1/Enemy Units")
 
 func _ready():
-	# set_process(true)
+#	set_process(true)
 	set_process_input(true)
+
 
 func _input(event):
 	#if event.type == InputEvent.MOUSE_MOTION: # Set mouse cursor.
 		#set_ui_cursor(ui_map.world_to_map(event.pos))
-	if (event.type == InputEvent.MOUSE_BUTTON and not event.is_pressed()):
-		var target_tile = terrain_map.world_to_map(event.pos)
-		var move_pos = terrain_map.map_to_world(target_tile)
-		if terrain_map.is_passable(target_tile):
-			pass
-			players_node.move_unit(Vector2(players_node.get_used_cells()[0]),target_tile)
+	if (event.type == InputEvent.MOUSE_BUTTON):
+		if event.is_pressed():
+			if players_node.get_cellv(players_node.world_to_map(event.pos)) != -1:
+				players_node.change_selected_unit(players_node.world_to_map(event.pos))
+				get_node("Cursor Unit").show()
+		else:
+			var target_tile = terrain_map.world_to_map(event.pos)
+			if terrain_map.is_passable(target_tile):
+				players_node.place_selected_unit(target_tile)
+				get_node("Cursor Unit").hide()
+			else:
+				players_node.place_selected_unit(players_node.get_selected_unit().vector_coords)
+	elif (event.type == InputEvent.MOUSE_MOTION):
+		if players_node.get_selected_unit() != null:
+			get_node("Cursor Unit").set_pos(event.pos)
