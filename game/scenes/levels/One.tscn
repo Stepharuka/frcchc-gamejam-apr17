@@ -1,11 +1,12 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=6 format=1]
 
-[ext_resource path="res://Assets/Tilesets/base-layer-terrain.tres" type="TileSet" id=1]
-[ext_resource path="res://Assets/Tilesets/stone-wall.tres" type="TileSet" id=2]
-[ext_resource path="res://Assets/Tilesets/player-units.tres" type="TileSet" id=3]
-[ext_resource path="res://Assets/Tilesets/enemy-units.tres" type="TileSet" id=4]
+[ext_resource path="res://game/tilesets/base-layer-terrain.tres" type="TileSet" id=1]
+[ext_resource path="res://game/tilesets/stone-wall.tres" type="TileSet" id=2]
+[ext_resource path="res://game/tilesets/player-units.tres" type="TileSet" id=3]
+[ext_resource path="res://game/tilesets/enemy-units.tres" type="TileSet" id=4]
+[ext_resource path="res://game/tilesets/ui.tres" type="TileSet" id=5]
 
-[node name="Node2D" type="Node2D"]
+[node name="Level 1" type="Node2D"]
 
 [node name="Base Layer Terrain" type="TileMap" parent="."]
 
@@ -82,7 +83,7 @@ tile_data = IntArray( 131079, 0 )
 [node name="User Interface" type="TileMap" parent="."]
 
 mode = 0
-tile_set = null
+tile_set = ExtResource( 5 )
 cell/size = Vector2( 64, 64 )
 cell/quadrant_size = 16
 cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )

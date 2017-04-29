@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=1]
 
-[ext_resource path="res://Assets/Sprites/placeholder-warrior.png" type="Texture" id=1]
+[ext_resource path="res://art/placeholder-warrior.png" type="Texture" id=1]
 
 [node name="Player Units" type="Node2D"]
 
